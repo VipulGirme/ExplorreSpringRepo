@@ -77,4 +77,9 @@ public class LibraryController {
     public ResponseEntity<Author> createAuthor (@RequestBody AuthorCreationRequest request) {
         return ResponseEntity.ok(libraryService.createAuthor(request));
     }
+	
+	@PostMapping("/author/{authorName}")
+    public ResponseEntity<List<Book>> getAuthorbyName (@PathVariable String authorName) {
+        return ResponseEntity.ok(libraryService.getBookbyAuthorName(authorName));
+    }
 }

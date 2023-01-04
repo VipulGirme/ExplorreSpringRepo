@@ -102,6 +102,10 @@ public class LibraryService {
 		BeanUtils.copyProperties(request, author);
 		return authorRepository.save(author);
 	}
+	
+	public List<Book> getBookbyAuthorName(String authorName) {
+		return authorRepository.getBooksByAuthor(authorName);
+	}
 
 	public List<String> lendABook(BookLendRequest request) {
 
