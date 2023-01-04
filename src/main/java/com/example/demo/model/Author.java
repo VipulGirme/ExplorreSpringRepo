@@ -17,16 +17,6 @@ public class Author {
 	private String firstName;
 	private String lastName;
 
-	@DBRef
-	private Book book;
-
-	public Book getBook() {
-		return book;
-	}
-
-	public void setBook(Book book) {
-		this.book = book;
-	}
 
 	public String getId() {
 		return id;
